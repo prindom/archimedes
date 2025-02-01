@@ -52,6 +52,6 @@ class ScormUploadForm extends Component
 
     public function render()
     {
-        return view('livewire.forms.scorm-upload-form');
+        return view('livewire.pages.scorm.upload');
     }
 }
