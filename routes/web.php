@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Livewire\Volt\Volt;
 
 Route::view('/', 'welcome');
 
@@ -13,7 +14,7 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::middleware('auth')->group(function () {
-    Route::get('upload-scorm', \App\Livewire\Forms\ScormUploadForm::class)
+    Volt::route('upload-scorm', 'pages.scorm.upload')
         ->name('upload-scorm');
 });
 
